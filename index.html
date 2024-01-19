@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Sodiqov Ogabek G14</title>
+  </head>
+  <body>
+    <section class="wrapper">
+      <!--? Sign Up  -->
+      <div class="form signup">
+        <header>Sign Up</header>
+        <form action="#">
+          <input type="text" placeholder="Full name" required />
+          <input type="text" placeholder="Email address" required />
+          <input type="text" placeholder="Password" required />
+          <div class="checkbox">
+            <input type="checkbox" id="signupCheck" />
+            <label for="signupCheck">
+              I accept all terms & conditions</label
+            >
+          </div>
+          <input type="submit" value="Signup" />
+        </form>
+      </div>
+      <!--? end of sign up  -->
+
+      <!--? Sign in  -->
+      <div class="form login">
+        <header>Login</header>
+        <form action="#">
+          <input type="text" placeholder="Email address" required />
+          <input type="text" placeholder="Password" required />
+          <a href="#">Forgot password?</a>
+          <input type="submit" value="Login" />
+        </form>
+      </div>
+      <!--? end of Sign in  -->
+    </section>
+    <script>
+      const wrapper = document.querySelector(".wrapper");
+     const signupHeader = document.querySelector(".signup header");
+     const loginHeader = document.querySelector(".login header");
+
+      loginHeader.addEventListener("click", () => {
+        wrapper.classList.add("active");
+      });
+      signupHeader.addEventListener("click", () => {
+        wrapper.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>
